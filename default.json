@@ -1,0 +1,56 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":automergeDigest",
+    ":automergeMinor",
+    ":labels(renovate)",
+    ":prHourlyLimit4",
+    ":semanticPrefixFix",
+    ":separateMajorReleases",
+    "config:best-practices",
+    "customManagers:dockerfileVersions",
+    "customManagers:gitlabPipelineVersions",
+    "customManagers:helmChartYamlAppVersions",
+    "docker:enableMajor"
+  ],
+  "ignorePresets": [
+    ":semanticPrefixFixDepsChoreOthers",
+    "docker:pinDigests",
+    "ignoreModulesAndTests"
+  ],
+  "configMigration": true,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": []
+  },
+  "packageRules": [
+    {
+      "description": "Set ci commit type for CI updates",
+      "matchCategories": [
+        "ci"
+      ],
+      "semanticCommitType": "ci"
+    },
+    {
+      "description": "Pin docker image digests only in CI",
+      "enabled": true,
+      "matchCategories": [
+        "ci"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "pinDigests": true
+    },
+    {
+      "description": "Group indirect go modules",
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchDepTypes": [
+        "indirect"
+      ],
+      "enabled": true
+    }
+  ]
+}
