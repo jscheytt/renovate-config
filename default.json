@@ -6,6 +6,7 @@
     ":labels(renovate)",
     ":prHourlyLimit4",
     ":rebaseStalePrs",
+    ":semanticCommits",
     ":semanticPrefixFix",
     ":separateMajorReleases",
     "config:best-practices",
