@@ -5,6 +5,7 @@
     ":automergeMinor",
     ":labels(renovate)",
     ":prHourlyLimit4",
+    ":rebaseStalePrs",
     ":semanticPrefixFix",
     ":separateMajorReleases",
     "config:best-practices",
