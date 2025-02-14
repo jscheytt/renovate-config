@@ -8,7 +8,7 @@
     ":rebaseStalePrs",
     ":semanticCommits",
     ":semanticPrefixFix",
-    ":separateMajorReleases",
+    ":separateMultipleMajorReleases",
     "config:best-practices",
     "customManagers:dockerfileVersions",
     "customManagers:gitlabPipelineVersions",
